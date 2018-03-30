@@ -55,7 +55,13 @@ Complex.prototype.minus = function(b) {
     return new Complex(this[0]-b[0],this[1]-b[1]);
 };
 Complex.prototype.conj = function() {
+    // Conjugate
     return new Complex(this[0],-this[1]);
+};
+Complex.prototype.rec = function() {
+    // Reciprocal
+    var denominator = Math.pow(this[0],2) + Math.pow(this[1],2);
+    return new Complex(this[0]/denominator,-this[1]/denominator);
 };
 Complex.prototype.equals = function(b) {
     return this[0] === b[0] && this[1] === b[1];
