@@ -36,6 +36,11 @@ var d = a.minus(b);
 ```javascript
 a.conj();
 ```
+### Reciprocal
+```javascript
+var e = a.rec();
+//returns (1/a)
+```
 
 ### Polar
 ```javascript
