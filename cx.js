@@ -13,19 +13,16 @@ Complex.prototype.set = function(x,y) {
 Complex.prototype.r = function() {
     return Math.sqrt(Math.pow(this[0],2) + Math.pow(this[1],2));
 };
+
 Complex.prototype.theta = function() {
-    if(this[0]>0)
-        return (Math.atan(this[0]/this[1])*180)/Math.PI;
-    if(this[0]<0 && this[1]>=0)
-        return (Math.atan(this[1]/this[0])*180)/Math.PI;
-    if(this[0]<0 && this[1]<0)
-        return ((Math.atan(this[1]/this[0]) - Math.PI)*180)/Math.PI;
-    if(this[0]==0 && this[1]>0)
-        return 90;
-    if(this[0]==0 && this[1]<0)
-        return -90
     if(this[0]==0&&this[1]==0)
         return undefined
+    if(this[0]>=0)
+        return (Math.atan(this[1]/this[0])*180)/Math.PI;
+    if(this[0]<0 && this[1]>=0)
+        return (Math.atan(this[1]/this[0]) + Math.PI)*180/Math.PI;
+    if(this[0]<0 && this[1]<0)
+        return ((Math.atan(this[1]/this[0]) - Math.PI)*180)/Math.PI;
 };
 
 Complex.prototype.setPolar = function(r,theta) {
