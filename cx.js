@@ -41,6 +41,13 @@ Complex.prototype.toString = function() {return this[0] + '+i' + this[1]}
 Complex.prototype.multiply = function(a) {
     return new Complex((this[0]*a[0] - this[1]*a[1]),(this[0]*a[1]+this[1]*a[0]));
 };
+Complex.prototype.divide = function divide(b) {
+	var denominator = Math.pow(b[0],2) + Math.pow(b[1],2);
+	return new Complex(
+		(this[0]*b[0] + this[1]*b[1])/denominator,
+		(this[1]*b[0] - this[0]*b[1])/denominator
+	);
+};
 Complex.prototype.plus = function(b) {
     return new Complex(this[0]+b[0],this[1]+b[1]);
 };
