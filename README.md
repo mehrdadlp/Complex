@@ -10,8 +10,9 @@ var b = new Complex("4+i5");
 
 ## Comparison
 ```javascript
-a < b       // true (compares absolute value)
-a.equals(b) // false
+a < b       // true  (compares absolute value)
+a === b     // false (compares absolute value)
+a.equals(b) // false (compares real and imaginary parts)
 ```
 
 ## Methods
@@ -25,6 +26,10 @@ console.log("a x b is equals to: " + a.multiply(b));
 ### Addition
 ```javascript
 var c = a.plus(b);
+```
+### Subtraction
+```javascript
+var d = a.minus(b);
 ```
 
 ### Conjugate
