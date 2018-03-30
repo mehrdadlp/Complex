@@ -47,6 +47,9 @@ Complex.prototype.multiply = function(a) {
 Complex.prototype.plus = function(b) {
     return new Complex(this[0]+b[0],this[1]+b[1]);
 };
+Complex.prototype.minus = function(b) {
+    return new Complex(this[0]-b[0],this[1]-b[1]);
+};
 Complex.prototype.conj = function() {
     return new Complex(this[0],-this[1]);
 };
