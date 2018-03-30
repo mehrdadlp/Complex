@@ -10,7 +10,7 @@ var b = new Complex("4+i5");
 
 ## Comparison
 ```javascript
-a < b       // true (compares polar form radius)
+a < b       // true (compares absolute value)
 a.equals(b) // false
 ```
 
